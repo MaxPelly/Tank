@@ -2,6 +2,7 @@
 
 #include "BattleTank.h"
 #include "Tank.h"
+#include "TankMovementComponent.h"
 #include "TankAIController.h"
 
 
@@ -19,7 +20,9 @@ void ATankAIController::Tick(float DeltaTime)
 	ATank* Tank = Cast<ATank>(GetPawn());
 	if (PlayerTank)
 	{
-		// TODO Move towards the player
+
+		MoveToActor(PlayerTank, AcceptanceRadius);
+		UE_LOG(LogTemp, Warning, TEXT("Ai trying to move"))
 		
 		// Aim towards the player
 		Tank->AimAt(PlayerTank->GetActorLocation());
