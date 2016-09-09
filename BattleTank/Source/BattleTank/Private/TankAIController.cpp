@@ -22,7 +22,7 @@ void ATankAIController::Tick(float DeltaTime)
 	{
 
 		MoveToActor(PlayerTank, AcceptanceRadius);
-		UE_LOG(LogTemp, Warning, TEXT("Ai trying to move"))
+
 		
 		// Aim towards the player
 		Tank->AimAt(PlayerTank->GetActorLocation());

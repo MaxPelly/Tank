@@ -36,7 +36,6 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 	intendTurnRight(directionToTurn);
 
 
-	UE_LOG(LogTemp, Warning, TEXT("REQUEST DIRECTMOVE CALLED"));
 	//
 
 
